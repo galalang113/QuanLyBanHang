@@ -14,7 +14,7 @@ namespace DAL
     {
         public SqlConnection GetCon()
         {
-            SqlConnection con = new SqlConnection(@"Data Source =DESKTOP-3IH4KIM; Initial Catalog=QLCAFE; Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-3IH4KIM; Initial Catalog=QLCAFE; Integrated Security=True");
             if (ConnectionState.Closed == con.State)
             {
                 con.Open();
@@ -24,7 +24,7 @@ namespace DAL
 
         public string Encrypt(string clearText)
         {
-            string EncryptionKey = "HKTthreeMember";
+            string EncryptionKey = "FourTmember";
             byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
             using (Aes encryptor = Aes.Create())
             {
@@ -79,6 +79,32 @@ namespace DAL
                 
             }
             return dt;
+        }
+        public bool ReadData(string truyvan)
+        {
+            DataTable dt = new DataTable();
+            dt = this.Read(truyvan);
+            if (dt.Rows.Count < 1)
+            {
+                return false;
+            }
+            return true;
+        }
+        public bool Change(string truyvan)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(truyvan, this.GetCon());
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return false;
         }
     }
 }

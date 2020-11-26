@@ -1,0 +1,5 @@
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\BEL\bin\Debug\BEL.dll
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\BEL\bin\Debug\BEL.pdb
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\BEL\obj\Debug\BEL.dll
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\BEL\obj\Debug\BEL.pdb

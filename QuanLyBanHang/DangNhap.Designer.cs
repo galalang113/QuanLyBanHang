@@ -37,6 +37,7 @@
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.picDangNhap = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDangKy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDangNhap)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,22 +54,27 @@
             this.cbHienMatKhau.TabIndex = 12;
             this.cbHienMatKhau.Text = "Hiện mật khẩu";
             this.cbHienMatKhau.UseVisualStyleBackColor = false;
+            this.cbHienMatKhau.CheckedChanged += new System.EventHandler(this.cbHienMatKhau_CheckedChanged);
+            this.cbHienMatKhau.Click += new System.EventHandler(this.cbHienMatKhau_Click);
             // 
             // txtMatKhau
             // 
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(280, 334);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(271, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(271, 23);
             this.txtMatKhau.TabIndex = 11;
             // 
             // txtTaiKhoan
             // 
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiKhoan.Location = new System.Drawing.Point(280, 296);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(271, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(271, 23);
             this.txtTaiKhoan.TabIndex = 9;
+            this.txtTaiKhoan.Leave += new System.EventHandler(this.txtTaiKhoan_Leave);
             // 
             // label3
             // 
@@ -109,6 +115,7 @@
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangNhap
             // 
@@ -117,7 +124,7 @@
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangNhap.Image = global::QuanLyBanHang.Properties.Resources.Key_32x32;
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDangNhap.Location = new System.Drawing.Point(103, 390);
+            this.btnDangNhap.Location = new System.Drawing.Point(280, 393);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(126, 44);
@@ -152,6 +159,23 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "ĐĂNG NHẬP";
             // 
+            // btnDangKy
+            // 
+            this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangKy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangKy.Image = global::QuanLyBanHang.Properties.Resources.Key_16x16;
+            this.btnDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDangKy.Location = new System.Drawing.Point(121, 393);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(126, 44);
+            this.btnDangKy.TabIndex = 15;
+            this.btnDangKy.Text = "ĐĂNG KÝ";
+            this.btnDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +183,7 @@
             this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.background_diachi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(671, 450);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.cbHienMatKhau);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
@@ -188,5 +213,6 @@
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.PictureBox picDangNhap;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDangKy;
     }
 }

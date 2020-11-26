@@ -16,3 +16,10 @@ E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\Qua
 E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.QuanLyTaiKhoan.resources
 E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.XoaThongTin.resources
 E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Admin.resources
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\BAL.dll
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\BEL.dll
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\DAL.dll
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\BAL.pdb
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\BEL.pdb
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\DAL.pdb
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete

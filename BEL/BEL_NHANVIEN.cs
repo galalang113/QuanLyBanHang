@@ -13,7 +13,7 @@ namespace BEL
     public class BEL_NHANVIEN
     {
         private string _HoTen;
-        private string _MaNV;
+        private string _IDNV;
         private string _LoaiNV;
         private string _GioiTinh;
         private string _NgaySinh;
@@ -26,7 +26,7 @@ namespace BEL
         public BEL_NHANVIEN()
         {
             this._HoTen = null;
-            this._MaNV = null;
+            this._IDNV = null;
             this._GioiTinh = null;
             this._NgaySinh = null;
             this._DiaChi = null;
@@ -40,7 +40,7 @@ namespace BEL
         public BEL_NHANVIEN(string ten, string ma, string gt, string day, string dc, string tk, string mk, int tt)
         {
             this._HoTen = ten;
-            this._MaNV = ma;
+            this._IDNV = ma;
             this._GioiTinh = gt;
             this._NgaySinh = day;
             this._DiaChi = dc;
@@ -51,7 +51,7 @@ namespace BEL
         public BEL_NHANVIEN(BEL_NHANVIEN nv)
         {
             this._HoTen = nv.Hoten;
-            this._MaNV = nv.MaNV;
+            this._IDNV = nv.IDNV;
             this._GioiTinh = nv.GioiTinh;
             this._NgaySinh = nv.NgaySinh;
             this._DiaChi = nv.DiaChi;
@@ -66,13 +66,13 @@ namespace BEL
         {
 
             this._HoTen = row["Hoten"].ToString(); 
-            this._MaNV = row["MaNV"].ToString();
+            this._IDNV = row["IDNV"].ToString();
             this._GioiTinh = row["Gioitinh"].ToString();
             this._NgaySinh = row["Ngaysinh"].ToString();
             this._DiaChi = row["Diachi"].ToString();
             this._TaiKhoan = row["TaiKhoan"].ToString();
             this._MatKhau = row["Matkhau"].ToString();
-            this._LoaiNV = row["LoaiNV"].ToString();
+            this._LoaiNV = row["IDLoaiNV"].ToString();
             this._DienThoai = row["Dienthoai"].ToString();
             this._TrangThai = (int)row["Trangthai"];
             this._CMND = row["CMND"].ToString();
@@ -82,10 +82,10 @@ namespace BEL
             get { return this._HoTen; }
             set { this._HoTen = value; }
         }
-        public string MaNV
+        public string IDNV
         {
-            get { return this._MaNV; }
-            set { this._MaNV = value; }
+            get { return this._IDNV; }
+            set { this._IDNV = value; }
         }
         public string GioiTinh
         {

@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BAL;
+using BEL;
+
 
 namespace QuanLyBanHang
 {
     public partial class form_BANHANG : Form
     {
+        public BEL_NHANVIEN bel_nv = new BEL_NHANVIEN();
         public form_BANHANG()
         {
             InitializeComponent();
