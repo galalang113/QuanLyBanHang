@@ -12,66 +12,54 @@ namespace BEL
 {
     public class BEL_HOADON
     {
-        private string _MaHD;
-        private string _MaNV;
-        private string _MaKM;
+        private string _IDHD;
+        private string _IDNV;
+        private string _IDKH;
         private string _Ngaylap;
         private string _GioLap;
         private int _TongTien;
-        private int _KhachTra;
-        private int _TienThua;
-        private int _Trangthai;
         public BEL_HOADON()
         {
-            _MaHD = null;
-            _MaNV = null;
-            _MaKM = null;
+            _IDHD = null;
+            _IDNV = null;
+            _IDKH = null;
             _Ngaylap = null;
             _GioLap = null;
         }
         public BEL_HOADON(DataRow row)
         {
-            this._MaHD = row["MaHD"].ToString();
-            this._MaNV = row["MaNV"].ToString();
+            this._IDHD = row["IDHD"].ToString();
+            this._IDNV = row["IDNV"].ToString();
             this._Ngaylap = row["Ngaylap"].ToString();
             this._GioLap = row["GioLap"].ToString();
             this._TongTien = (int)row["TongTien"];
-            this._KhachTra = (int)row["KhachTra"];
-            this._TienThua = (int)row["TienThua"];
-            this._Trangthai = (int)row["Trangthai"];
         }
-        public BEL_HOADON(string mahd,string manv, string makm, string ngaylap, int trangthai)
+        public BEL_HOADON(string idhd,string idnv, string idkh, string ngaylap)
         {
-            this._MaHD = mahd;
-            this._MaNV = manv;
-            this._MaKM = makm;
+            this._IDHD = idhd;
+            this._IDNV = idnv;
+            this._IDKH = idkh;
             this._Ngaylap = ngaylap;
-            this._Trangthai = trangthai;
         }
-        public string MAHD
+        public string IDHD
         {
-            get { return this._MaHD; }
-            set { this._MaHD = value; }
+            get { return this._IDHD; }
+            set { this._IDHD = value; }
         }
-        public string MANV
+        public string IDNV
         {
-            get { return this._MaNV; }
-            set { this._MaNV = value; }
+            get { return this._IDNV; }
+            set { this._IDNV = value; }
         }
-        public string MAKM
+        public string IDKH
         {
-            get { return this._MaKM; }
-            set { this._MaKM = value; }
+            get { return this._IDKH; }
+            set { this._IDKH = value; }
         }
         public string NGAYLAP
         {
             get { return this._Ngaylap; }
             set { this._Ngaylap = value; }
-        }
-        public int TRANGTHAI
-        {
-            get { return this._Trangthai; }
-            set { this._Trangthai = value; }
         }
         public string GIOLAP
         {
@@ -82,16 +70,6 @@ namespace BEL
         {
             get { return this._TongTien; }
             set { this._TongTien = value; }
-        }
-        public int KHACHTRA
-        {
-            get { return this._KhachTra; }
-            set { this._KhachTra = value; }
-        }
-        public int TIENTHUA
-        {
-            get { return this._TienThua; }
-            set { this._TienThua = value; }
         }
     }
 }

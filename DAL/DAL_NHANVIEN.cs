@@ -41,15 +41,6 @@ namespace DAL
             string truyvan = "select * from NHANVIEN where IDNV ='" + id + "'";
             dt = this.Read(truyvan);
             BEL_NHANVIEN nv = new BEL_NHANVIEN(dt.Rows[0]);
-            //nv.IDNV = dt.Rows[0]["IDNV"].ToString();
-            //nv.Hoten = dt.Rows[0]["Hoten"].ToString();
-            //nv.LoaiNV = dt.Rows[0]["IDLoaiNV"].ToString();
-            //nv.DienThoai = dt.Rows[0]["Dienthoai"].ToString();
-            //nv.GioiTinh = dt.Rows[0]["Gioitinh"].ToString();
-            //nv.NgaySinh = dt.Rows[0]["Ngaysinh"].ToString();
-            //nv.TrangThai = int.Parse(dt.Rows[0]["Trangthai"].ToString());
-            //nv.DiaChi = dt.Rows[0]["Diachi"].ToString();
-            //nv.CMND = dt.Rows[0]["CMND"].ToString();
             return nv;
         }
         public bool ThemTaiKhoan(BEL_NHANVIEN nv)

@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL_HOADON.cs" />
+    <Compile Include="BAL_KHACHHANG.cs" />
     <Compile Include="BAL_NHANVIEN.cs" />
+    <Compile Include="BAL_SANPHAM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

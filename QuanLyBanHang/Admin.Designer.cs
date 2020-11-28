@@ -128,6 +128,7 @@
             this.btnThoat.Text = "ĐĂNG XUẤT";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // Admin
             // 

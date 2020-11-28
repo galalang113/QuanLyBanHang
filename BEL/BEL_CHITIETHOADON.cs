@@ -8,51 +8,47 @@ namespace BEL
 {
     public class BEL_CHITIETHOADON
     {
-        private string _MaHD;
-        private string _TenSP;
+        private string _IDHD;
+        private string _IDSP;
         private int _Soluong;
-        private string _Ngaylap;
-        private int _Trangthai;
+        private int _ThanhTien;
         public BEL_CHITIETHOADON()
         {
-            _MaHD = null;
-            _TenSP = null;
-            _Soluong = 0;
-            _Ngaylap = null;
-            _Trangthai = 0;
+            _IDHD = null;
+            _IDSP = null;
         }
-        public BEL_CHITIETHOADON(string mahd, string tensp, int soluong, string ngaylap, int trangthai)
+        public BEL_CHITIETHOADON(BEL_SANPHAM sp)
         {
-            this._MaHD = mahd;
-            this._TenSP = tensp;
+            this._IDSP = sp.IDSP;
+            this._Soluong = sp.SoLuong;
+            this._ThanhTien = (sp.SoLuong * sp.DonGia);
+        }
+        public BEL_CHITIETHOADON(string idhd, string idsp, int soluong, int thanhtien)
+        {
+            this._IDHD = idhd;
+            this._IDSP = idsp;
             this._Soluong = soluong;
-            this._Ngaylap = ngaylap;
-            this._Trangthai = trangthai;
+            this._ThanhTien = thanhtien;
         }
-        public string MAHD
+        public string IDHD
         {
-            get { return this._MaHD; }
-            set { this._MaHD = value; }
+            get { return this._IDHD; }
+            set { this._IDHD = value; }
         }
-        public string TENSP
+        public string IDSP
         {
-            get { return this._TenSP; }
-            set { this._TenSP = value; }
+            get { return this._IDSP; }
+            set { this._IDSP = value; }
         }
         public int SOLUONG
         {
             get { return this._Soluong; }
             set { this._Soluong = value; }
         }
-        public string NGAYLAP
+        public int ThanhTien
         {
-            get { return this._Ngaylap; }
-            set { this._Ngaylap = value; }
-        }
-        public int TRANGTHAI
-        {
-            get { return this._Trangthai; }
-            set { this._Trangthai = value; }
+            get { return this._ThanhTien; }
+            set { this._ThanhTien = value; }
         }
     }
 }

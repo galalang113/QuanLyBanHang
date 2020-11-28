@@ -96,6 +96,18 @@
     <Compile Include="QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThayDoiSoLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiSoLuong.Designer.cs">
+      <DependentUpon>ThayDoiSoLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTin.Designer.cs">
+      <DependentUpon>ThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="XoaThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiSoLuong.resx">
+      <DependentUpon>ThayDoiSoLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTin.resx">
+      <DependentUpon>ThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaThongTin.resx">
       <DependentUpon>XoaThongTin.cs</DependentUpon>
@@ -195,6 +213,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Images\Key\Key_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Save\Save_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

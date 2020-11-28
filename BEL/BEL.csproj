@@ -43,9 +43,9 @@
   <ItemGroup>
     <Compile Include="BEL_CHITIETHOADON.cs" />
     <Compile Include="BEL_HOADON.cs" />
+    <Compile Include="BEL_KHACHHANG.cs" />
     <Compile Include="BEL_NHANVIEN.cs" />
     <Compile Include="BEL_SANPHAM.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

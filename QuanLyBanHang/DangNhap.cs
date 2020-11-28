@@ -21,6 +21,8 @@ namespace QuanLyBanHang
             InitializeComponent();
             this.CenterToScreen();
             txtMatKhau.UseSystemPasswordChar = true;
+            txtTaiKhoan.Text = "nv1";
+            txtMatKhau.Text = "123123";
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -67,9 +69,20 @@ namespace QuanLyBanHang
 
                         form_BANHANG bg = new form_BANHANG();
                         bg.bel_nv = new BEL_NHANVIEN(bel_nv);
-                        this.Hide();
-                        bg.ShowDialog();
-                        this.Show();
+                        if (bel_nv.LoaiNV.Equals("1"))
+                        {
+                            this.Hide();
+                            bg.ShowDialog();
+                            this.Show();
+                        }
+                        else
+                        {
+                            Admin admin = new Admin();
+                            this.Hide();
+                            admin.ShowDialog();
+                            this.Show();
+                        }
+
                     }
                     else
                     {
@@ -84,10 +97,7 @@ namespace QuanLyBanHang
 
 
 
-            //Admin admin = new Admin();
-            //this.Hide();
-            //admin.ShowDialog();
-            //this.Show();
+            
         }
 
         private void DangNhap_Load(object sender, EventArgs e)

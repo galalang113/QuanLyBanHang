@@ -107,7 +107,7 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThoat.Image = global::QuanLyBanHang.Properties.Resources.Log_Out_32x32;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThoat.Location = new System.Drawing.Point(489, 390);
+            this.btnThoat.Location = new System.Drawing.Point(489, 393);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(131, 44);

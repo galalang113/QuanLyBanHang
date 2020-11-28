@@ -114,6 +114,7 @@ namespace QuanLyBanHang
                 {
                     if (bal_nv.ThemTaiKhoan(bel_nv))
                     {
+                        this.Close();
                         MessageBox.Show("Đăng ký thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                     else
@@ -126,7 +127,7 @@ namespace QuanLyBanHang
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
             {
                 e.Handled = true;
             }
@@ -134,7 +135,7 @@ namespace QuanLyBanHang
 
         private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
             {
                 e.Handled = true;
             }
@@ -201,9 +202,9 @@ namespace QuanLyBanHang
                 txtHoTen.Focus();
                 MessageBox.Show("Vui lòng nhập họ tên! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (txtHoTen.Text.Length > 16)
+            if (txtHoTen.Text.Length > 25)
             {
-                txtTaiKhoan.Focus();
+                txtHoTen.Focus();
                 MessageBox.Show("Vui lòng nhập họ tên >=1 && <=16 kí tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
