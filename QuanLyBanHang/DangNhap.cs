@@ -21,8 +21,6 @@ namespace QuanLyBanHang
             InitializeComponent();
             this.CenterToScreen();
             txtMatKhau.UseSystemPasswordChar = true;
-            txtTaiKhoan.Text = "nv1";
-            txtMatKhau.Text = "123123";
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
