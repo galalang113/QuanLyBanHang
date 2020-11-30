@@ -107,6 +107,7 @@ namespace QuanLyBanHang
                 bel_kh = new BEL_KHACHHANG();
                 bel_kh.HoTen = txtTenKH.Text.ToString();
                 bel_kh.DienThoai = txtSDT.Text;
+                bel_kh.Trangthai = 1;
                 if(radNam.Checked == true)
                 {
                     bel_kh.GioiTinh = "Nam";
@@ -139,21 +140,13 @@ namespace QuanLyBanHang
 
         private void lvKhachHang_Click(object sender, EventArgs e)
         {
-            if (lvKhachHang.SelectedItems.Count > 0)
-            {
-                foreach (ListViewItem item in lvKhachHang.SelectedItems)
-                {
-                    this.bel_kh = new BEL_KHACHHANG(this.listKhachHang[KiemTraTrung(item.SubItems[1].Text, this.listKhachHang)]);
-                    labLuuY.Text = "Khách hàng:  "+ bel_kh.HoTen +" - " + bel_kh.DienThoai.Substring(bel_kh.DienThoai.Length - 4,4);
-                    break;
-                }
-            }
+            
         }
-        public int KiemTraTrung(string tenkh, List<BEL_KHACHHANG> arr)
+        public int KiemTraTrung(string dt, List<BEL_KHACHHANG> arr)
         {
             for (int i = 0; i < arr.Count; i++)
             {
-                if (arr[i].HoTen.ToLower().Equals(tenkh.ToLower()))
+                if (arr[i].DienThoai.ToLower().Equals(dt.ToLower()))
                 {
                     return i;
                 }
@@ -224,6 +217,20 @@ namespace QuanLyBanHang
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
             {
                 e.Handled = true;
+            }
+        }
+
+        private void lvKhachHang_DoubleClick(object sender, EventArgs e)
+        {
+            if (lvKhachHang.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem item in lvKhachHang.SelectedItems)
+                {
+                    this.bel_kh = new BEL_KHACHHANG(this.listKhachHang[KiemTraTrung(item.SubItems[2].Text, this.listKhachHang)]);
+                    labLuuY.Text = "Khách hàng:  " + bel_kh.HoTen + " - " + bel_kh.DienThoai.Substring(bel_kh.DienThoai.Length - 4, 4);
+                    this.Close();
+                    break;
+                }
             }
         }
     }

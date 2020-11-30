@@ -25,6 +25,14 @@ namespace BEL
             this._TenSP = null;
             this._MaHD = null;
         }
+        public BEL_SANPHAM(BEL_SANPHAM sp)
+        {
+            this._IDSP = sp.IDSP;
+            this._TenSP = sp.TenSP;
+            this._DonGia = sp.DonGia;
+            this._TrangThai = sp.TrangThai;
+
+        }
         public BEL_SANPHAM(string masp, string tensp, int dongia, int trangthai)
         {
             this._IDSP = masp;

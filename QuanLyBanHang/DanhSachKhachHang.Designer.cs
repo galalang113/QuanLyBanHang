@@ -73,7 +73,7 @@
             this.groupBox2.Size = new System.Drawing.Size(618, 152);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "THÔNG TIN NHÂN VIÊN-TÀI KHOẢN";
+            this.groupBox2.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
             // button1
             // 
@@ -210,6 +210,7 @@
             this.lvKhachHang.UseCompatibleStateImageBehavior = false;
             this.lvKhachHang.View = System.Windows.Forms.View.Details;
             this.lvKhachHang.Click += new System.EventHandler(this.lvKhachHang_Click);
+            this.lvKhachHang.DoubleClick += new System.EventHandler(this.lvKhachHang_DoubleClick);
             // 
             // STT
             // 
@@ -261,9 +262,9 @@
             this.labLuuY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labLuuY.Location = new System.Drawing.Point(12, 183);
             this.labLuuY.Name = "labLuuY";
-            this.labLuuY.Size = new System.Drawing.Size(179, 17);
+            this.labLuuY.Size = new System.Drawing.Size(208, 17);
             this.labLuuY.TabIndex = 11;
-            this.labLuuY.Text = "Vui lòng chọn khách hàng!";
+            this.labLuuY.Text = "Nhấn đúp để chọn khách hàng!";
             this.labLuuY.TextChanged += new System.EventHandler(this.labLuuY_TextChanged);
             // 
             // timer1

@@ -79,6 +79,7 @@ namespace QuanLyBanHang
                         {
                             Admin admin = new Admin();
                             this.Hide();
+                            admin.bel_nv = new BEL_NHANVIEN(bel_nv);
                             admin.ShowDialog();
                             this.Show();
                         }

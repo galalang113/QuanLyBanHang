@@ -25,3 +25,4 @@ E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\bin\Debug\DAL
 E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
 E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.ThongTin.resources
 E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.ThayDoiSoLuong.resources
+E:\HK_5\Kiểm thử phần mềm\DoAn\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.QuanLyHoaDon.resources

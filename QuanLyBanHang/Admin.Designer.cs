@@ -114,6 +114,7 @@
             this.btnQLHoaDon.Text = "QUẢN LÝ HÓA ĐƠN";
             this.btnQLHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLHoaDon.UseVisualStyleBackColor = false;
+            this.btnQLHoaDon.Click += new System.EventHandler(this.btnQLHoaDon_Click);
             // 
             // btnThoat
             // 
@@ -145,6 +146,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

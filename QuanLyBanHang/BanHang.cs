@@ -125,7 +125,7 @@ namespace QuanLyBanHang
 
         private void cboChonSoLuongSP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
             {
                 e.Handled = true;
             }
@@ -360,7 +360,7 @@ namespace QuanLyBanHang
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if(this.listSanPhamDatHang.Count < 0)
+            if(this.listSanPhamDatHang.Count < 1)
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

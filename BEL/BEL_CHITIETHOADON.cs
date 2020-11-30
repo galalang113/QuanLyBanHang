@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,13 @@ namespace BEL
             this._IDSP = sp.IDSP;
             this._Soluong = sp.SoLuong;
             this._ThanhTien = (sp.SoLuong * sp.DonGia);
+        }
+        public BEL_CHITIETHOADON(DataRow row)
+        {
+            this._IDHD = row["IDHD"].ToString();
+            this._Soluong = int.Parse(row["Soluong"].ToString());
+            this._ThanhTien  = int.Parse(row["ThanhTien"].ToString());
+            this._IDSP = row["IDSP"].ToString();
         }
         public BEL_CHITIETHOADON(string idhd, string idsp, int soluong, int thanhtien)
         {

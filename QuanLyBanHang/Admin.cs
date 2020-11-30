@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BEL;
 
 namespace QuanLyBanHang
 {
     public partial class Admin : Form
     {
+        public BEL_NHANVIEN bel_nv = new BEL_NHANVIEN();
         public Admin()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace QuanLyBanHang
         {
             QuanLyTaiKhoan quanLyTaiKhoan = new QuanLyTaiKhoan();
             this.Hide();
+            quanLyTaiKhoan.bel_nv = new BEL_NHANVIEN(bel_nv);
             quanLyTaiKhoan.ShowDialog();
             this.Show();
         }
@@ -45,6 +48,20 @@ namespace QuanLyBanHang
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnQLHoaDon_Click(object sender, EventArgs e)
+        {
+            QuanLyHoaDon quanLyHoaDon = new QuanLyHoaDon();
+            this.Hide();
+            quanLyHoaDon.ShowDialog();
+            this.Show();
+
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

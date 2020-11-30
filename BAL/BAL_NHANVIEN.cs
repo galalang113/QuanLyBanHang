@@ -35,5 +35,21 @@ namespace BAL
         {
             return dal_nv.ThongTinTaiKhoan(id);
         }
+        public List<BEL_NHANVIEN> DuLieuNhanVien()
+        {
+            return dal_nv.DuLieuNhanVien();
+        }
+        public bool KiemTraTrungNhanVien(BEL_NHANVIEN bel_nv)
+        {
+            return dal_nv.KiemTraTrungNhanVien(bel_nv);
+        }
+        public bool KhoiPhucMatKhauNhanVien(BEL_NHANVIEN bel_nv)
+        {
+            return dal_nv.KhoiPhucMatKhauNhanVien(bel_nv);
+        }
+        public bool CapNhatNhanVien(BEL_NHANVIEN bel_nv)
+        {
+            return dal_nv.CapNhatNhanVien(bel_nv);
+        }
     }
 }

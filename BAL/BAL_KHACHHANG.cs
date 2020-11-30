@@ -15,6 +15,10 @@ namespace BAL
         {
             return this.dal_kh.HienThiLView(Trangthai);
         }
+        public List<BEL_KHACHHANG> DuLieuKhachHang()
+        {
+            return this.dal_kh.DuLieuKhachHang();
+        }
         public bool ThemKhachHang(BEL_KHACHHANG bEL_KHACHHANG)
         {
             return dal_kh.ThemKhachHang(bEL_KHACHHANG);
@@ -23,9 +27,17 @@ namespace BAL
         {
             return dal_kh.KiemTraTrungKH(bEL_KHACHHANG);
         }
+        public string KiemTraTrungKHID(string sdt)
+        {
+            return dal_kh.KiemTraTrungKHID(sdt);
+        }
         public BEL_KHACHHANG ThongTinKH(string sdt)
         {
             return dal_kh.ThongTinKH(sdt);
+        }
+        public bool CapNhatKH(BEL_KHACHHANG bel_kh)
+        {
+            return dal_kh.CapNhatKH(bel_kh);
         }
     }
 }

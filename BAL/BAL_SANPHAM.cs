@@ -30,5 +30,17 @@ namespace BAL
             }
             return -1;
         }
+        public bool ThemSanPham(BEL_SANPHAM bel_sp)
+        {
+            return dal_sp.ThemSanPham(bel_sp);
+        }
+        public bool CapNhatSanPham(BEL_SANPHAM bel_sp)
+        {
+            return dal_sp.CapNhatSanPham(bel_sp);
+        }
+        public List<BEL_SANPHAM > DuLieuSanPham()
+        {
+            return dal_sp.DuLieuSanPham();
+        }
     }
 }

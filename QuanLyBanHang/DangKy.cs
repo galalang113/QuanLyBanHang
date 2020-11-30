@@ -32,17 +32,18 @@ namespace QuanLyBanHang
         {
 
         }
-
+        private int Age(DateTime dateTime)
+        {
+            string today = dateTime.ToShortDateString();
+            DateTime birthday = DateTime.Parse(today, System.Globalization.CultureInfo.InvariantCulture);
+            int age = (Int32.Parse(DateTime.Today.ToString("yyyyMMdd")) - Int32.Parse(birthday.ToString("yyyyMMdd"))) / 10000;
+            return age;
+        }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            if (txtHoTen.Text.Equals("") || txtMatKhau.Text.Equals("") || txtNhapLai.Text.Equals("") || txtCMND.Text.Equals("") || txtCMND.Text.Length > 12 || txtSDT.Text.Length != 10 || txtDiachi.Text.Equals("") || txtSDT.Text.Equals(""))
+            if (txtHoTen.Text.Equals("") || Age(dtNgaySinh.Value) < 18 || txtMatKhau.Text.Equals("") || txtNhapLai.Text.Equals("") || txtCMND.Text.Equals("") || txtCMND.Text.Length > 12 || txtSDT.Text.Length != 10 || txtDiachi.Text.Equals("") || txtSDT.Text.Equals(""))
             {
-                if (txtTaiKhoan.Text.Equals(""))
-                {
-                    txtTaiKhoan.Focus();
-                    MessageBox.Show("Vui lòng nhập Tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (txtMatKhau.Text.Equals(""))
+               if (txtMatKhau.Text.Equals(""))
                 {
                     txtMatKhau.Focus();
                     MessageBox.Show("Vui lòng nhập Mật Khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -82,9 +83,14 @@ namespace QuanLyBanHang
                     txtSDT.Focus();
                     MessageBox.Show("Vui lòng nhập SĐT là 10 số! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                 
+                else if (Age(dtNgaySinh.Value) < 18)
+                {
+                    dtNgaySinh.Focus();
+                    MessageBox.Show("Ngày sinh >= 18 tuổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
-            else 
+            else
             {
                 
                 BEL_NHANVIEN bel_nv = new BEL_NHANVIEN();
@@ -93,7 +99,7 @@ namespace QuanLyBanHang
                 bel_nv.NgaySinh = dtNgaySinh.Value.ToShortDateString();
                 bel_nv.CMND = txtCMND.Text;
                 bel_nv.TrangThai = 0;
-                bel_nv.TaiKhoan = txtTaiKhoan.Text;
+                bel_nv.TaiKhoan = txtSDT.Text;
                 bel_nv.MatKhau = txtMatKhau.Text;
                 bel_nv.LoaiNV = "1";
                 if (radNam.Checked == true)
@@ -181,20 +187,6 @@ namespace QuanLyBanHang
             }
         }
 
-        private void txtTaiKhoan_Leave(object sender, EventArgs e)
-        {
-            if (txtTaiKhoan.Text.Equals("") || txtTaiKhoan.Text.Length < 3)
-            {
-                txtTaiKhoan.Focus();
-                MessageBox.Show("Vui lòng nhập Tài khoản lớn hơn 3 kí tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            if(txtTaiKhoan.Text.Length > 16)
-            {
-                txtTaiKhoan.Focus();
-                MessageBox.Show("Vui lòng nhập Tài khoản >=3 && <=16 kí tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void txtHoTen_Leave(object sender, EventArgs e)
         {
             if (txtHoTen.Text.Equals(""))
@@ -216,6 +208,16 @@ namespace QuanLyBanHang
                 txtDiachi.Focus();
                 MessageBox.Show("Vui lòng nhập địa chỉ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

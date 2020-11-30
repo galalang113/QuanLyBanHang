@@ -38,7 +38,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lvNhanVien = new System.Windows.Forms.ListView();
             this.STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IDNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Hoten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Dienthoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ngaysinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,14 +48,11 @@
             this.Trangthai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Diachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labMKMatDinh = new System.Windows.Forms.Label();
-            this.labTenNV = new System.Windows.Forms.Label();
             this.radMoKhoa = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnKhoiPhucMatKhau = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radNhanVien = new System.Windows.Forms.RadioButton();
@@ -106,7 +103,7 @@
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(880, 72);
+            this.btnThem.Location = new System.Drawing.Point(880, 130);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(121, 45);
@@ -114,6 +111,7 @@
             this.btnThem.Text = "THÊM";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox3
             // 
@@ -171,9 +169,9 @@
             this.label10.Location = new System.Drawing.Point(27, 37);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 19);
+            this.label10.Size = new System.Drawing.Size(96, 19);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Mã Nhân Viên:";
+            this.label10.Text = "ID Nhân Viên:";
             // 
             // label11
             // 
@@ -191,7 +189,7 @@
             // 
             this.lvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.STT,
-            this.MaNV,
+            this.IDNV,
             this.Hoten,
             this.Dienthoai,
             this.Ngaysinh,
@@ -205,20 +203,21 @@
             this.lvNhanVien.Location = new System.Drawing.Point(16, 342);
             this.lvNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.lvNhanVien.Name = "lvNhanVien";
-            this.lvNhanVien.Size = new System.Drawing.Size(1238, 224);
+            this.lvNhanVien.Size = new System.Drawing.Size(1239, 224);
             this.lvNhanVien.TabIndex = 1;
             this.lvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lvNhanVien.View = System.Windows.Forms.View.Details;
+            this.lvNhanVien.Click += new System.EventHandler(this.lvNhanVien_Click);
             // 
             // STT
             // 
             this.STT.Text = "STT";
             this.STT.Width = 42;
             // 
-            // MaNV
+            // IDNV
             // 
-            this.MaNV.Text = "Mã Nhân Viên";
-            this.MaNV.Width = 125;
+            this.IDNV.Text = "ID Nhân Viên";
+            this.IDNV.Width = 125;
             // 
             // Hoten
             // 
@@ -258,7 +257,7 @@
             // Diachi
             // 
             this.Diachi.Text = "Địa Chỉ";
-            this.Diachi.Width = 272;
+            this.Diachi.Width = 250;
             // 
             // labMKMatDinh
             // 
@@ -272,18 +271,6 @@
             this.labMKMatDinh.Size = new System.Drawing.Size(70, 22);
             this.labMKMatDinh.TabIndex = 0;
             this.labMKMatDinh.Text = "123123";
-            // 
-            // labTenNV
-            // 
-            this.labTenNV.AutoSize = true;
-            this.labTenNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labTenNV.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTenNV.Location = new System.Drawing.Point(317, 687);
-            this.labTenNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labTenNV.Name = "labTenNV";
-            this.labTenNV.Size = new System.Drawing.Size(118, 22);
-            this.labTenNV.TabIndex = 2;
-            this.labTenNV.Text = "tên nhân viên";
             // 
             // radMoKhoa
             // 
@@ -314,25 +301,12 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "QUẢN LÝ TÀI KHOẢN";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 687);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(247, 22);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Nhân Viên Đang Đăng Nhập:";
-            // 
             // groupBox2
             // 
             this.groupBox2.BackgroundImage = global::QuanLyBanHang.Properties.Resources.background_diachi;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.btnKhoiPhucMatKhau);
             this.groupBox2.Controls.Add(this.btnCapNhat);
-            this.groupBox2.Controls.Add(this.btnXoa);
             this.groupBox2.Controls.Add(this.btnLamMoi);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox5);
@@ -376,13 +350,14 @@
             this.btnKhoiPhucMatKhau.Text = "KHÔI PHỤC LẠI MẬT KHẨU";
             this.btnKhoiPhucMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnKhoiPhucMatKhau.UseVisualStyleBackColor = false;
+            this.btnKhoiPhucMatKhau.Click += new System.EventHandler(this.btnKhoiPhucMatKhau_Click);
             // 
             // btnCapNhat
             // 
             this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(1009, 72);
+            this.btnCapNhat.Location = new System.Drawing.Point(1009, 130);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(126, 45);
@@ -390,34 +365,22 @@
             this.btnCapNhat.Text = "CẬP NHẬT";
             this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCapNhat.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(880, 125);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(121, 45);
-            this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "XÓA";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(1009, 125);
+            this.btnLamMoi.Location = new System.Drawing.Point(880, 81);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(126, 45);
+            this.btnLamMoi.Size = new System.Drawing.Size(255, 45);
             this.btnLamMoi.TabIndex = 16;
             this.btnLamMoi.Text = "LÀM MỚI";
             this.btnLamMoi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // groupBox4
             // 
@@ -535,6 +498,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(275, 26);
             this.txtSDT.TabIndex = 3;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // txtCMND
             // 
@@ -544,6 +508,7 @@
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(275, 26);
             this.txtCMND.TabIndex = 4;
+            this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             // 
             // label5
             // 
@@ -597,11 +562,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.background_diachi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1266, 568);
+            this.ClientSize = new System.Drawing.Size(1266, 583);
             this.Controls.Add(this.lvNhanVien);
-            this.Controls.Add(this.labTenNV);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox2);
             this.Name = "QuanLyTaiKhoan";
             this.Text = "TaiKhoan";
@@ -631,7 +594,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListView lvNhanVien;
         private System.Windows.Forms.ColumnHeader STT;
-        private System.Windows.Forms.ColumnHeader MaNV;
+        private System.Windows.Forms.ColumnHeader IDNV;
         private System.Windows.Forms.ColumnHeader Hoten;
         private System.Windows.Forms.ColumnHeader Dienthoai;
         private System.Windows.Forms.ColumnHeader Ngaysinh;
@@ -641,14 +604,11 @@
         private System.Windows.Forms.ColumnHeader Trangthai;
         private System.Windows.Forms.ColumnHeader Diachi;
         private System.Windows.Forms.Label labMKMatDinh;
-        private System.Windows.Forms.Label labTenNV;
         private System.Windows.Forms.RadioButton radMoKhoa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnKhoiPhucMatKhau;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radNhanVien;

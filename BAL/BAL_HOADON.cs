@@ -23,5 +23,13 @@ namespace BAL
         {
             return dal_hd.ThemChiTietHoaDon(cthd);
         }
+        public List<BEL_HOADON> DuLieuHoaDon()
+        {
+            return dal_hd.DuLieuHoaDon();
+        }
+        public List<BEL_CHITIETHOADON> DuLieuCTHoaDon()
+        {
+            return dal_hd.DuLieuCTHoaDon();
+        }
     }
 }

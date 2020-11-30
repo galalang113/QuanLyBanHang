@@ -30,6 +30,7 @@ namespace BEL
         {
             this._IDHD = row["IDHD"].ToString();
             this._IDNV = row["IDNV"].ToString();
+            this._IDKH = row["IDKH"].ToString();
             this._Ngaylap = row["Ngaylap"].ToString();
             this._GioLap = row["GioLap"].ToString();
             this._TongTien = (int)row["TongTien"];
