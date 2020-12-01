@@ -222,61 +222,68 @@ namespace QuanLyBanHang
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            if (radKhoa.Checked == true && this.bel_nv.IDNV.Equals(txtMaNV.Text))
+            if (txtMaNV.Text.Equals(""))
             {
-                MessageBox.Show("Không thể thực hiện với chính bạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                radMoKhoa.Checked = true;
+                MessageBox.Show("Vui lòng chọn tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                BEL_NHANVIEN bel_nv = new BEL_NHANVIEN();
-                BAL_NHANVIEN bal_nv = new BAL_NHANVIEN();
-                BEL_NHANVIEN bel_nv_temp = new BEL_NHANVIEN();
-                bel_nv_temp = new BEL_NHANVIEN(bal_nv.ThongTinTaiKhoan(txtMaNV.Text));
-                bel_nv.IDNV = txtMaNV.Text;
-                bel_nv.Hoten = txtHoTenNV.Text;
-                bel_nv.DienThoai = txtSDT.Text;
-                bel_nv.NgaySinh = dtNgaySinh.Value.ToShortDateString();
-                bel_nv.CMND = txtCMND.Text;
-                bel_nv.TaiKhoan = bel_nv_temp.TaiKhoan;
-                bel_nv.MatKhau = bel_nv_temp.MatKhau;
-                if (radNam.Checked == true)
+                if (radKhoa.Checked == true && this.bel_nv.IDNV.Equals(txtMaNV.Text))
                 {
-                    bel_nv.GioiTinh = "Nam";
+                    MessageBox.Show("Không thể thực hiện với chính bạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    radMoKhoa.Checked = true;
                 }
                 else
                 {
-                    bel_nv.GioiTinh = "Nữ";
-                }
-                if (radQuanLy.Checked == true)
-                {
-                    bel_nv.LoaiNV = "2";
-                }
-                else
-                {
-                    bel_nv.LoaiNV = "1";
-                }
-                if (radMoKhoa.Checked == true)
-                {
-                    bel_nv.TrangThai = 1;
-                }
-                else
-                {
-                    bel_nv.TrangThai = 0;
-                }
-                bel_nv.DiaChi = txtDiachiNV.Text;
+                    BEL_NHANVIEN bel_nv = new BEL_NHANVIEN();
+                    BAL_NHANVIEN bal_nv = new BAL_NHANVIEN();
+                    BEL_NHANVIEN bel_nv_temp = new BEL_NHANVIEN();
+                    bel_nv_temp = new BEL_NHANVIEN(bal_nv.ThongTinTaiKhoan(txtMaNV.Text));
+                    bel_nv.IDNV = txtMaNV.Text;
+                    bel_nv.Hoten = txtHoTenNV.Text;
+                    bel_nv.DienThoai = txtSDT.Text;
+                    bel_nv.NgaySinh = dtNgaySinh.Value.ToShortDateString();
+                    bel_nv.CMND = txtCMND.Text;
+                    bel_nv.TaiKhoan = bel_nv_temp.TaiKhoan;
+                    bel_nv.MatKhau = bel_nv_temp.MatKhau;
+                    if (radNam.Checked == true)
+                    {
+                        bel_nv.GioiTinh = "Nam";
+                    }
+                    else
+                    {
+                        bel_nv.GioiTinh = "Nữ";
+                    }
+                    if (radQuanLy.Checked == true)
+                    {
+                        bel_nv.LoaiNV = "2";
+                    }
+                    else
+                    {
+                        bel_nv.LoaiNV = "1";
+                    }
+                    if (radMoKhoa.Checked == true)
+                    {
+                        bel_nv.TrangThai = 1;
+                    }
+                    else
+                    {
+                        bel_nv.TrangThai = 0;
+                    }
+                    bel_nv.DiaChi = txtDiachiNV.Text;
 
-                
-                if (bal_nv.CapNhatNhanVien(bel_nv))
-                {
-                    HienThiThongTinNhanVien(lvNhanVien);
-                    MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (bal_nv.CapNhatNhanVien(bel_nv))
+                    {
+                        HienThiThongTinNhanVien(lvNhanVien);
+                        MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Cập nhật thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            }    
         }
 
         private void lvNhanVien_Click(object sender, EventArgs e)
